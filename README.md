@@ -25,8 +25,11 @@ var opts = {
     'disableGhostbox': true, //false | true | default: false
     'subtitlePath': '', //default: ""
     'startAt': 0, //default: 0
-    'startVolume': 0.8 //0.0 ... 1.0 default: 1.0
+    'startVolume': 0.8, //0.0 ... 1.0 default: 1.0
+    'nativeLoop': false, // loop video, default: false
+    'videoQueue': 10 // video buffer size in MB, default: omxplayer default is 10
 };
+
 omxp.open('path_to_file', opts);
 omxp.on('changeStatus',function(status){
     console.log('Status',status);
